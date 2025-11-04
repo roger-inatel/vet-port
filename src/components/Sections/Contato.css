@@ -1,0 +1,455 @@
+/* ============================================
+   SEÇÃO CONTATO - Design Moderno
+   ============================================ */
+
+.contato {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #fef8ff 0%, #f2d9f4 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elementos decorativos de fundo */
+.contato::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(231, 81, 164, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contato-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   CABEÇALHO DA SEÇÃO
+   ============================================ */
+
+.contato-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.contato-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #be2087;
+  margin-bottom: 1rem;
+}
+
+.header-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.header-decoration {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #e751a4, #d63a9a);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out 0.3s backwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100px; }
+}
+
+/* ============================================
+   LAYOUT PRINCIPAL (2 COLUNAS)
+   ============================================ */
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 3rem;
+  align-items: start;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   CARDS DE INFORMAÇÃO
+   ============================================ */
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 100px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(190, 32, 135, 0.08);
+  border: 2px solid rgba(231, 81, 164, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.info-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(190, 32, 135, 0.15);
+  border-color: rgba(231, 81, 164, 0.3);
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e751a4 0%, #d63a9a 100%);
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(231, 81, 164, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.info-text h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 0.25rem;
+}
+
+.info-text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ============================================
+   CTA BOX (WhatsApp)
+   ============================================ */
+
+.cta-box {
+  padding: 2rem;
+  background: linear-gradient(135deg, #e751a4 0%, #d63a9a 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(231, 81, 164, 0.3);
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cta-box h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.cta-box p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: #ffffff;
+  color: #e751a4;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: #fffbfd;
+}
+
+/* ============================================
+   FORMULÁRIO
+   ============================================ */
+
+.contato-form-wrapper {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(190, 32, 135, 0.12);
+  border: 2px solid rgba(231, 81, 164, 0.1);
+}
+
+.contact-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #be2087;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #e751a4;
+  margin-left: 0.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #2d2d2d;
+  background: #fafafa;
+  border: 2px solid #e9bedf;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+  border-color: #e751a4;
+  box-shadow: 0 0 0 4px rgba(231, 81, 164, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ============================================
+   BOTÃO DE ENVIO
+   ============================================ */
+
+.submit-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #e751a4 0%, #d63a9a 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 6px 20px rgba(231, 81, 164, 0.3);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 81, 164, 0.4);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.submit-button.submitted {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+}
+
+/* ============================================
+   MENSAGEM DE SUCESSO
+   ============================================ */
+
+.success-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  color: #2e7d32;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 968px) {
+  .contato-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contato-info {
+    position: relative;
+    top: 0;
+  }
+
+  .cta-box {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contato {
+    padding: 3rem 1.5rem;
+  }
+
+  .contato-header {
+    margin-bottom: 3rem;
+  }
+
+  .contato-form-wrapper {
+    padding: 2rem;
+  }
+
+  .contact-form h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato {
+    padding: 2rem 1rem;
+  }
+
+  .contato-header {
+    margin-bottom: 2rem;
+  }
+
+  .info-card {
+    padding: 1.25rem;
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .info-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cta-box {
+    padding: 1.5rem;
+  }
+
+  .contato-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+  }
+
+  .submit-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   ACESSIBILIDADE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .contato-header,
+  .contato-content,
+  .info-card,
+  .submit-button,
+  .success-message {
+    animation: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,64 @@
+/* ============================================
+   APP.CSS - Estilos Globais Base
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #f2d9f4 0%, #e9bedf 100%);
+  color: #2d2d2d;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 1.5rem;
+  color: #be2087;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Container Principal */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Scroll Suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Seleção de Texto */
+::selection {
+  background: #e751a4;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #e751a4;
+  color: #ffffff;
+}

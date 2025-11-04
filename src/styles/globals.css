@@ -1,0 +1,103 @@
+/* ============================================
+   GLOBALS.CSS - Estilos Base Compartilhados
+   ============================================ */
+
+/* Reset e Box-sizing já estão no App.css */
+
+/* Estilos de Seção Padrão */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Formulário de Contato */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(190, 32, 135, 0.1);
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  color: #2d2d2d;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #e9bedf;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #e751a4;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(231, 81, 164, 0.1);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #e751a4 0%, #d63a9a 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 15px rgba(231, 81, 164, 0.3);
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 81, 164, 0.4);
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
+}
