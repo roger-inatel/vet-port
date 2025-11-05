@@ -10,7 +10,8 @@ export default function Contato() {
   
   const [formStatus, setFormStatus] = useState({
     submitted: false,
-    error: false
+    error: false,
+    loading: false
   })
 
   const handleChange = (e) => {
@@ -21,20 +22,50 @@ export default function Contato() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    // Simulação de envio (substitua pela sua lógica real)
-    console.log('Dados do formulário:', formData)
-    
-    // Feedback visual
-    setFormStatus({ submitted: true, error: false })
-    
-    // Reset após 3 segundos
-    setTimeout(() => {
-      setFormData({ name: '', email: '', message: '' })
-      setFormStatus({ submitted: false, error: false })
-    }, 3000)
+    setFormStatus({ submitted: false, error: false, loading: true })
+
+    try {
+      // OPÇÃO 1: EmailJS (Recomendado)
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: 'service_330qsda',      // ← Substitua aqui
+          template_id: '__ejs-test-mail-service__',     // ← Substitua aqui
+          user_id: 'T7z8UzEtfmwyM-kfw',          // ← Substitua aqui
+          template_params: {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+            to_email: 'rayscris@hotmail.com'  // Email da Dra. Rayssa
+          }
+        })
+      })
+
+      if (response.ok) {
+        setFormStatus({ submitted: true, error: false, loading: false })
+        
+        // Reset após 10 segundos (aumentado de 3 para 10)
+        setTimeout(() => {
+          setFormData({ name: '', email: '', message: '' })
+          setFormStatus({ submitted: false, error: false, loading: false })
+        }, 10000)
+      } else {
+        throw new Error('Erro ao enviar')
+      }
+    } catch (error) {
+      console.error('Erro:', error)
+      setFormStatus({ submitted: false, error: true, loading: false })
+      
+      // Limpa erro após 10 segundos
+      setTimeout(() => {
+        setFormStatus({ submitted: false, error: false, loading: false })
+      }, 10000)
+    }
   }
 
   return (
@@ -126,6 +157,7 @@ export default function Contato() {
                   onChange={handleChange}
                   placeholder="Digite seu nome"
                   required
+                  disabled={formStatus.loading}
                 />
               </div>
 
@@ -142,6 +174,7 @@ export default function Contato() {
                   onChange={handleChange}
                   placeholder="seu@email.com"
                   required
+                  disabled={formStatus.loading}
                 />
               </div>
 
@@ -158,15 +191,23 @@ export default function Contato() {
                   placeholder="Conte-me sobre seu pet e como posso ajudar..."
                   rows="5"
                   required
+                  disabled={formStatus.loading}
                 />
               </div>
 
               <button 
                 type="submit" 
-                className={`submit-button ${formStatus.submitted ? 'submitted' : ''}`}
-                disabled={formStatus.submitted}
+                className={`submit-button ${formStatus.submitted ? 'submitted' : ''} ${formStatus.loading ? 'loading' : ''}`}
+                disabled={formStatus.submitted || formStatus.loading}
               >
-                {formStatus.submitted ? (
+                {formStatus.loading ? (
+                  <>
+                    <svg className="spinner" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                    </svg>
+                    Enviando...
+                  </>
+                ) : formStatus.submitted ? (
                   <>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12"/>
@@ -187,6 +228,12 @@ export default function Contato() {
               {formStatus.submitted && (
                 <div className="success-message">
                   ✓ Obrigada pelo contato! Retornarei em breve.
+                </div>
+              )}
+
+              {formStatus.error && (
+                <div className="error-message">
+                  ✗ Erro ao enviar mensagem. Tente novamente ou entre em contato via WhatsApp.
                 </div>
               )}
             </form>
