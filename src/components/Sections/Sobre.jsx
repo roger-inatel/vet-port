@@ -1,7 +1,5 @@
 import React from 'react'
 import './Sobre.css'
-// IMPORTANTE: Importe a foto
-import draRayssaFoto from '../../assets/images/dra-rayssa.jpg'
 
 export default function Sobre() {
   return (
@@ -20,7 +18,7 @@ export default function Sobre() {
             <div className="image-wrapper">
               <div className="image-placeholder">
                 <img 
-                  src={draRayssaFoto}
+                  src="/images/dra-rayssa.jpg"
                   alt="Dra. Rayssa Lopes - Médica Veterinária"
                   className="profile-image"
                 />
