@@ -1,5 +1,6 @@
 import React from 'react'
 import './Sobre.css'  // ← Certifique-se que este arquivo existe na mesma pasta
+import draRayssaImage from '../../assets/images/dra-rayssa.jpg'
 
 export default function Sobre() {
   return (
@@ -18,7 +19,7 @@ export default function Sobre() {
             <div className="image-wrapper">
               <div className="image-placeholder">
                 <img 
-                  src="public/images/dra-rayssa.jpg" 
+                  src={draRayssaImage}
                   alt="Dra. Rayssa Lopes - Médica Veterinária"
                   className="profile-image"
                 />
@@ -32,7 +33,7 @@ export default function Sobre() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2v20M2 12h20"/>
                 </svg>
-                <span>4+ anos</span>
+                <span>8+ anos</span>
               </div>
               <div className="badge">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
