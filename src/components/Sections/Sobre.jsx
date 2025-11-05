@@ -1,7 +1,7 @@
 import React from 'react'
 import './Sobre.css'
-// Importe a imagem
-import draRayssaFoto from '../../assets/images/dra-rayssa.jpg'
+// Importe a foto de assets
+import draRayssaFoto from '../../assets/images/dra-rayssa.jpg'  // ← Certifique-se que este arquivo existe na mesma pasta
 
 export default function Sobre() {
   return (
