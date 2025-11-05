@@ -1,6 +1,7 @@
 import React from 'react'
-import './Sobre.css'  // ← Certifique-se que este arquivo existe na mesma pasta
-import draRayssaImage from '../../assets/images/dra-rayssa.jpg'
+import './Sobre.css'
+// Importe a imagem
+import draRayssaFoto from '../../assets/images/dra-rayssa.jpg'
 
 export default function Sobre() {
   return (
@@ -19,7 +20,7 @@ export default function Sobre() {
             <div className="image-wrapper">
               <div className="image-placeholder">
                 <img 
-                  src={draRayssaImage}
+                  src={draRayssaFoto}
                   alt="Dra. Rayssa Lopes - Médica Veterinária"
                   className="profile-image"
                 />
