@@ -60,7 +60,7 @@ export default function Contato() {
               </div>
               <div className="info-text">
                 <h4>Telefone/WhatsApp</h4>
-                <p>(35) 99999-9999</p>
+                <p>+55 (35) 9827-1299</p>
               </div>
             </div>
 
@@ -73,7 +73,7 @@ export default function Contato() {
               </div>
               <div className="info-text">
                 <h4>Email</h4>
-                <p>contato@drarayssa.com</p>
+                <p>rayscris@hotmail.com</p>
               </div>
             </div>
 
@@ -95,7 +95,7 @@ export default function Contato() {
               <h4>Atendimento Domiciliar</h4>
               <p>Conforto e segurança para seu pet, sem estresse de transporte</p>
               <a 
-                href="https://wa.me/5535999999999?text=Olá! Gostaria de agendar uma consulta" 
+                href="https://wa.me/5535998941011?text=Olá! Gostaria de agendar uma consulta" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="whatsapp-button"
