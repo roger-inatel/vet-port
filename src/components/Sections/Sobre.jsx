@@ -32,7 +32,7 @@ export default function Sobre() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2v20M2 12h20"/>
                 </svg>
-                <span>8+ anos</span>
+                <span>4+ anos</span>
               </div>
               <div className="badge">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -54,12 +54,16 @@ export default function Sobre() {
             </div>
 
             <div className="text-content">
-              <p>
-                A Dra. Rayssa é médica veterinária formada pela Universidade X, com mais de 8 anos de experiência em clínica de pequenos animais. Atua com consultas, cirurgias de rotina e atendimento domiciliar, oferecendo um atendimento humanizado e focado no bem-estar do animal e na orientação do tutor.
-              </p>
-              <p>
-                Sua filosofia de trabalho prioriza diagnósticos precisos, tratamentos baseados em evidências e um relacionamento de confiança com os proprietários. Atende cães e gatos em domicílio, com equipamentos portáteis e parcerias com laboratórios locais para exames complementares.
-              </p>
+             <p>
+             A Dra. Rayssa é médica veterinária formada pela Universidade UNA e atualmente cursa pós-graduação em Medicina de Felinos. Sua paixão pelos animais e dedicação à profissão se refletem no cuidado e atenção com cada paciente.
+             </p>
+            <p>
+            Atua diariamente no Centro de Bem-Estar Animal de Pouso Alegre, onde presta atendimento de urgência e emergência a cães e gatos em casos críticos — como atropelamentos, fraturas, intoxicações, ferimentos graves e miíases — acumulando uma ampla experiência prática no manejo de diferentes situações clínicas.
+            </p>
+            <p>
+            Além da atuação no serviço público, realiza consultas particulares, sempre com foco em um atendimento humanizado, diagnósticos precisos e tratamentos baseados em evidências. Seu compromisso é garantir o bem-estar dos animais e orientar seus tutores com empatia e profissionalismo.
+            </p>
+
             </div>
 
             {/* Diferenciais */}
