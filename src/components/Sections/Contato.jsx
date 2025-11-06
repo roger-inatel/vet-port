@@ -35,7 +35,7 @@ export default function Contato() {
         },
         body: JSON.stringify({
           service_id: 'service_330qsda',      // ← Substitua aqui
-          template_id: '__ejs-test-mail-service__',     // ← Substitua aqui
+          template_id: 'template_lj2n0bq',     // ← Substitua aqui
           user_id: 'T7z8UzEtfmwyM-kfw',          // ← Substitua aqui
           template_params: {
             from_name: formData.name,
