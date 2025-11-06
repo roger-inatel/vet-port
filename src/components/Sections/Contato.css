@@ -228,6 +228,12 @@
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(190, 32, 135, 0.12);
   border: 2px solid rgba(231, 81, 164, 0.1);
+  overflow: hidden;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 100%;
 }
 
 .contact-form h3 {
@@ -260,6 +266,7 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
+  max-width: 100%;
   padding: 0.875rem 1.25rem;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
@@ -269,6 +276,7 @@
   border-radius: 10px;
   transition: all 0.3s ease;
   outline: none;
+  box-sizing: border-box;
 }
 
 .form-group input::placeholder,
@@ -431,11 +439,16 @@
   .form-group input,
   .form-group textarea {
     padding: 0.75rem 1rem;
+    font-size: 0.95rem;
   }
 
   .submit-button {
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
+  }
+
+  .contact-form h3 {
+    font-size: 1.4rem;
   }
 }
 
