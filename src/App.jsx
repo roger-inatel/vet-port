@@ -1,9 +1,11 @@
 import React from 'react'
+import { Analytics } from "@vercel/analytics/next"
 import Header from './components/Header/Header'
 import Sobre from './components/Sections/Sobre'
 import Servicos from './components/Sections/Servicos'
 import Contato from './components/Sections/Contato'
 import Footer from './components/Footer/footer'
+
 
 function App() {
   return (
