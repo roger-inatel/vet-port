@@ -2,21 +2,43 @@
    GLOBALS.CSS - Estilos Base Compartilhados
    ============================================ */
 
-/* Reset e Box-sizing já estão no App.css */
-
-/* Estilos de Seção Padrão */
-.section {
-  padding: 4rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+/* --- RESET GLOBAL --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* ❌ impede scroll lateral */
+  box-sizing: border-box;
 }
 
-/* Formulário de Contato */
+/* Garante que todos os elementos respeitem o box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Impede zoom horizontal em mobile */
+body {
+  max-width: 100vw;
+  background-color: #fff;
+}
+
+/* --- ESTILOS DE SEÇÃO --- */
+.section {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* --- FORMULÁRIO DE CONTATO --- */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   max-width: 600px;
+  width: 100%;
   margin: 2rem auto;
   padding: 2rem;
   background: #ffffff;
@@ -24,6 +46,7 @@
   box-shadow: 0 4px 20px rgba(190, 32, 135, 0.1);
 }
 
+/* (demais regras iguais às suas) */
 .contact-form label {
   display: flex;
   flex-direction: column;
@@ -81,7 +104,7 @@
   transform: translateY(0);
 }
 
-/* Responsividade */
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
   .section {
     padding: 3rem 1.5rem;
