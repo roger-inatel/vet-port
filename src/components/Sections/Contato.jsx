@@ -118,7 +118,7 @@ export default function Contato() {
               <div className="info-text">
                 <h4>Horário de Atendimento</h4>
                 <p>Seg - Sex: 18h às 22h</p>
-                <p>Sáb: 8h às 12h</p>
+                <p>Sáb: 8h às 15h</p>
               </div>
             </div>
 

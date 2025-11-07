@@ -1,0 +1,416 @@
+/* ============================================
+   FOOTER - Design Moderno e Sofisticado
+   ============================================ */
+
+.footer {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  color: #e0e0e0;
+  padding: 4rem 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elemento decorativo sutil */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #e751a4 0%, #d63a9a 50%, #e751a4 100%);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ============================================
+   CONTEÚDO PRINCIPAL DO FOOTER
+   ============================================ */
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ============================================
+   COLUNAS
+   ============================================ */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e751a4;
+  margin-bottom: 0.5rem;
+}
+
+.footer-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 1rem;
+}
+
+.footer-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+
+.footer-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+.badge-item svg {
+  color: #e751a4;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   NAVEGAÇÃO
+   ============================================ */
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.footer-nav a::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #e751a4;
+}
+
+.footer-nav a:hover {
+  color: #e751a4;
+  padding-left: 1.5rem;
+}
+
+.footer-nav a:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+/* ============================================
+   CONTATO
+   ============================================ */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link svg {
+  color: #e751a4;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+a.contact-link:hover {
+  color: #e751a4;
+}
+
+a.contact-link:hover svg {
+  transform: scale(1.15);
+}
+
+/* ============================================
+   HORÁRIOS
+   ============================================ */
+
+.footer-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  border-left: 3px solid #e751a4;
+  transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+  background: rgba(231, 81, 164, 0.1);
+  transform: translateX(5px);
+}
+
+.schedule-item.inactive {
+  border-left-color: #666;
+  opacity: 0.5;
+}
+
+.day {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.time {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+/* ============================================
+   DIVISOR
+   ============================================ */
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(231, 81, 164, 0.3) 50%, transparent 100%);
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+   BOTTOM BAR
+   ============================================ */
+
+.footer-bottom {
+  padding-top: 2rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.legal-separator {
+  color: #555;
+}
+
+.legal-link {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+  color: #e751a4;
+  text-decoration: underline;
+}
+
+/* ============================================
+   BOTÃO WHATSAPP FLUTUANTE
+   ============================================ */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 999;
+  text-decoration: none;
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse-whatsapp {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+  }
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+  }
+
+  .footer-title {
+    font-size: 1.3rem;
+  }
+
+  .footer-heading {
+    font-size: 1.1rem;
+  }
+
+  .schedule-item {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .footer-legal {
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================
+   ACESSIBILIDADE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-nav a,
+  .contact-link,
+  .schedule-item,
+  .whatsapp-float {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (OPCIONAL)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  }
+}
