@@ -126,7 +126,7 @@ export default function Contato() {
               <h4>Atendimento Domiciliar</h4>
               <p>Conforto e segurança para seu pet, sem estresse de transporte</p>
               <a 
-                href="https://wa.me/5535998941011?text=Olá! Gostaria de agendar uma consulta" 
+                href="https://wa.me/553598271299?text=Olá! Gostaria de agendar uma consulta" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="whatsapp-button"
