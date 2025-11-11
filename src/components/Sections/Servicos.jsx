@@ -28,42 +28,7 @@ const services = [
       </svg>
     ),
   },
-  {
-    title: 'Cirurgias',
-    desc: 'Procedimentos cirúrgicos de baixa e média complexidade.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/>
-        <path d="m16 16 6-6"/>
-        <path d="m8 8 6-6"/>
-        <path d="m9 7 8 8"/>
-        <path d="m21 11-8-8"/>
-      </svg>
-    ),
-  },
-  {
-    title: 'Emergências',
-    desc: 'Atendimento emergencial a domicílio quando necessário.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-        <path d="M12 8v4"/>
-        <path d="M12 16h.01"/>
-        <path d="M12 6v.01"/>
-      </svg>
-    ),
-  },
-  {
-    title: 'Orientação Nutricional',
-    desc: 'Planos alimentares e recomendações para cada caso.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
-        <path d="M7 2v20"/>
-        <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
-      </svg>
-    ),
-  },
+  
   {
     title: 'Exames',
     desc: 'Coleta e encaminhamento de exames laboratoriais.',

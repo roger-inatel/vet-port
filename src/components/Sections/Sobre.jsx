@@ -18,7 +18,7 @@ export default function Sobre() {
             <div className="image-wrapper">
               <div className="image-placeholder">
                 <img 
-                  src="/images/dra-rayssa.jpg"
+                  src="/images/Foto_ray.jpeg"
                   alt="Dra. Rayssa Lopes - Médica Veterinária"
                   className="profile-image"
                 />

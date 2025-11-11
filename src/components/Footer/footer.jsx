@@ -100,7 +100,7 @@ export default function Footer() {
               © {currentYear} Dra. Rayssa Lopes - Medicina Veterinária. Todos os direitos reservados.
             </p>
             <div className="footer-legal">
-              <span className="legal-item">CRMV-MG XXXXX</span>
+              <span className="legal-item">CRMV-MG 33347</span>
               <span className="legal-separator">•</span>
               <a href="#" className="legal-link">Política de Privacidade</a>
             </div>
