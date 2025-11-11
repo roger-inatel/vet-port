@@ -51,7 +51,7 @@ export default function Footer() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
-                <span>(35) 99827-1299</span>
+                <span>(35) 9827-1299</span>
               </a>
               <a href="mailto:rayscris@hotmail.com" className="contact-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -105,11 +105,24 @@ export default function Footer() {
               <a href="#" className="legal-link">Política de Privacidade</a>
             </div>
           </div>
+          
+          {/* Crédito do Desenvolvedor */}
+          <div className="footer-credit">
+            <span>Desenvolvido por - </span>
+            <a 
+              href="https://c-dice.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="developer-link"
+            >
+              C-Dice
+            </a>
+          </div>
         </div>
 
         {/* Botão WhatsApp Flutuante */}
         <a 
-          href="https://wa.me/5535998941011?text=Olá! Gostaria de agendar uma consulta"
+          href="https://wa.me/553598271299?text=Olá! Gostaria de agendar uma consulta"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-float"
