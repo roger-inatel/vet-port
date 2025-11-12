@@ -1,5 +1,6 @@
 import React from 'react'
 import './Sobre.css'
+import Gallery from './Gallery' // ⬅️ IMPORTAR O NOVO COMPONENTE
 
 export default function Sobre() {
   return (
@@ -63,7 +64,6 @@ export default function Sobre() {
             <p>
             Além da atuação no serviço público, realiza consultas particulares, sempre com foco em um atendimento humanizado, diagnósticos precisos e tratamentos baseados em evidências. Seu compromisso é garantir o bem-estar dos animais e orientar seus tutores com empatia e profissionalismo.
             </p>
-
             </div>
 
             {/* Diferenciais */}
@@ -96,6 +96,9 @@ export default function Sobre() {
                 </li>
               </ul>
             </div>
+
+            {/* ⬇️ NOVO: CARROSSEL DE FOTOS */}
+            <Gallery />
           </div>
         </div>
       </div>

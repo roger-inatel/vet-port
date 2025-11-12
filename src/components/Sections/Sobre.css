@@ -1,5 +1,5 @@
 /* ============================================
-   SEÇÃO SOBRE - Design Moderno e Visual
+   SEÇÃO SOBRE - Design Moderno e Responsivo
    ============================================ */
 
 .sobre {
@@ -39,6 +39,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  padding: 0 1rem;
 }
 
 /* ============================================
@@ -89,14 +90,14 @@
 }
 
 /* ============================================
-   LAYOUT PRINCIPAL (2 COLUNAS)
+   LAYOUT PRINCIPAL - MOBILE FIRST
    ============================================ */
 
 .sobre-content {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 3rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: stretch;
   animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
@@ -112,18 +113,19 @@
 }
 
 /* ============================================
-   CARD DE IMAGEM/AVATAR
+   CARD DE IMAGEM/AVATAR - LIMPO E OTIMIZADO
    ============================================ */
 
 .sobre-image-card {
-  position: sticky;
-  top: 100px;
+  position: relative;
   background: #ffffff;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(190, 32, 135, 0.12);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(190, 32, 135, 0.12);
   border: 2px solid rgba(231, 81, 164, 0.1);
   transition: all 0.3s ease;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .sobre-image-card:hover {
@@ -133,9 +135,10 @@
 
 .image-wrapper {
   position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 2rem;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1.5rem;
+  flex-shrink: 0;
 }
 
 .image-placeholder {
@@ -146,25 +149,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   box-shadow: 0 8px 25px rgba(231, 81, 164, 0.3);
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease;
   overflow: hidden;
-  padding: 4px; /* Borda rosa ao redor da foto */
+  padding: 4px;
 }
 
 .profile-image {
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   object-fit: cover;
+  object-position: center 35%;
   border-radius: 50%;
   background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: object-position 0.4s ease;
 }
 
-.sobre-image-card:hover .image-placeholder {
-  transform: scale(1.05);
+.sobre-image-card:hover .profile-image {
+  object-position: center 37%;
 }
 
 .image-glow {
@@ -172,8 +177,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   background: radial-gradient(circle, rgba(231, 81, 164, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 1;
@@ -197,15 +202,17 @@
 
 .badges {
   display: flex;
-  gap: 0.75rem;
+  flex-direction: column;
+  gap: 0.6rem;
   justify-content: center;
 }
 
 .badge {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1rem;
   background: linear-gradient(135deg, #f9f0f9 0%, #f5e8f7 100%);
   border: 1px solid rgba(231, 81, 164, 0.2);
   border-radius: 20px;
@@ -214,6 +221,8 @@
   font-weight: 600;
   color: #be2087;
   transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .badge:hover {
@@ -225,6 +234,7 @@
 
 .badge svg {
   flex-shrink: 0;
+  transition: stroke 0.3s ease;
 }
 
 .badge:hover svg {
@@ -243,23 +253,24 @@
 
 .text-highlight {
   background: linear-gradient(135deg, #f9f0f9 0%, #ffffff 100%);
-  padding: 2rem;
-  border-radius: 16px;
+  padding: 1.5rem;
+  border-radius: 12px;
   border-left: 4px solid #e751a4;
   box-shadow: 0 4px 15px rgba(190, 32, 135, 0.08);
 }
 
 .text-highlight h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #be2087;
   margin-bottom: 0.75rem;
+  line-height: 1.3;
 }
 
 .lead {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #666;
   font-weight: 400;
@@ -274,11 +285,11 @@
 
 .text-content p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
 /* ============================================
@@ -287,18 +298,18 @@
 
 .diferenciais {
   background: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
+  padding: 1.5rem;
+  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(190, 32, 135, 0.08);
   border: 2px solid rgba(231, 81, 164, 0.1);
 }
 
 .diferenciais h4 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #be2087;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .diferenciais-list {
@@ -312,14 +323,15 @@
 
 .diferenciais-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.75rem;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #444;
   transition: all 0.3s ease;
   padding: 0.5rem;
   border-radius: 8px;
+  line-height: 1.5;
 }
 
 .diferenciais-list li:hover {
@@ -331,6 +343,7 @@
   flex-shrink: 0;
   color: #e751a4;
   transition: transform 0.3s ease;
+  margin-top: 2px;
 }
 
 .diferenciais-list li:hover svg {
@@ -338,75 +351,126 @@
 }
 
 /* ============================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE - TABLET (768px+)
    ============================================ */
 
-@media (max-width: 968px) {
+@media (min-width: 480px) {
+  .badges {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
   .sobre-content {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 320px 1fr;
     gap: 2.5rem;
+    align-items: start;
   }
 
   .sobre-image-card {
-    position: relative;
-    top: 0;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .sobre {
-    padding: 3rem 1.5rem;
+    position: sticky;
+    top: 100px;
+    padding: 2rem;
+    border-radius: 20px;
   }
 
-  .sobre-header {
-    margin-bottom: 3rem;
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+  }
+
+  .image-glow {
+    width: 220px;
+    height: 220px;
   }
 
   .text-highlight {
-    padding: 1.5rem;
+    padding: 2rem;
+    border-radius: 16px;
   }
 
   .text-highlight h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .lead {
+    font-size: 1.1rem;
+  }
+
+  .text-content p {
     font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
   }
 
   .diferenciais {
-    padding: 1.5rem;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  .diferenciais h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .diferenciais-list li {
+    font-size: 0.95rem;
+    align-items: center;
+  }
+
+  .diferenciais-list li svg {
+    margin-top: 0;
   }
 }
 
+/* ============================================
+   RESPONSIVIDADE - DESKTOP LARGE (1024px+)
+   ============================================ */
+
+@media (min-width: 1024px) {
+  .sobre-content {
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE SMALL (max 480px)
+   ============================================ */
+
 @media (max-width: 480px) {
   .sobre {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .sobre-header {
     margin-bottom: 2rem;
   }
 
+  .sobre-header h2 {
+    font-size: 1.75rem;
+  }
+
   .image-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .image-glow {
     width: 160px;
     height: 160px;
   }
 
-  .image-glow {
-    width: 180px;
-    height: 180px;
-  }
-
-  .badges {
-    flex-direction: column;
-    gap: 0.5rem;
+  .sobre-image-card {
+    padding: 1.25rem;
   }
 
   .badge {
-    justify-content: center;
+    font-size: 0.8rem;
+    padding: 0.6rem 0.85rem;
   }
 
   .text-highlight {
@@ -414,16 +478,27 @@
   }
 
   .text-highlight h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
-  .text-content p {
-    text-align: left;
+  .lead {
     font-size: 0.95rem;
   }
 
-  .diferenciais-list li {
+  .text-content p {
     font-size: 0.9rem;
+  }
+
+  .diferenciais {
+    padding: 1.25rem;
+  }
+
+  .diferenciais h4 {
+    font-size: 1.1rem;
+  }
+
+  .diferenciais-list li {
+    font-size: 0.85rem;
   }
 }
 
@@ -432,16 +507,11 @@
    ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
-  .sobre-header h2,
-  .header-decoration,
-  .sobre-content,
-  .image-glow {
-    animation: none;
-  }
-
-  .sobre-image-card,
-  .badge,
-  .diferenciais-list li {
-    transition: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
