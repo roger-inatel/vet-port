@@ -8,7 +8,7 @@ export default function Sobre() {
       <div className="sobre-container">
         {/* Cabeçalho da Seção */}
         <div className="sobre-header">
-          <h2>Sobre a Dra. Rayssa</h2>
+          <h2>Rayssa Lopes Médica Veterinária</h2>
           <div className="header-decoration"></div>
         </div>
 
@@ -48,9 +48,9 @@ export default function Sobre() {
           {/* Texto e Informações */}
           <div className="sobre-text">
             <div className="text-highlight">
-              <h3>Medicina Veterinária Humanizada</h3>
+              <h3>Medicina Veterinária Integrada</h3>
               <p className="lead">
-                Cuidado integral focado no bem-estar do seu pet e na tranquilidade da sua família
+                Atendimento com empatia e compromisso com o bem-estar do seu pet, onde ele se sente seguro.
               </p>
             </div>
 
