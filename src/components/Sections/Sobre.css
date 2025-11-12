@@ -66,28 +66,21 @@
   background: linear-gradient(90deg, #e751a4, #d63a9a);
   margin: 0 auto;
   border-radius: 2px;
-  animation: expandWidth 0.8s ease-out 0.3s backwards;
+  transform-origin: left center;
+  animation: slideInRight 0.s cubic-bezier(0.55, 0.08, 0.32, 0.99) 0.3s backwards;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes expandWidth {
+@keyframes slideInRight {
   from {
     width: 0;
+    opacity: 0;
   }
   to {
     width: 100px;
+    opacity: 1;
   }
 }
+
 
 /* ============================================
    LAYOUT PRINCIPAL - MOBILE FIRST

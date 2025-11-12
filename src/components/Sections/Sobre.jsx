@@ -55,20 +55,21 @@ export default function Sobre() {
             </div>
 
             <div className="text-content">
-             <p>
-            Dra. Rayssa Lopes
-Cuidado onde eles confiam🐶🐈
-             </p>
+             
             <p>
             Acredito em uma medicina veterinária que valoriza atenção, responsabilidade e clareza. Sou médica veterinária formada pela Universidade UNA e pós-graduanda em Medicina de Felinos, com atuação tanto no serviço público quanto em atendimento particular.
             Ao longo da minha trajetória na Medicina Veterinária, desenvolvi um olhar sensível e atento à individualidade de cada animal, considerando comportamento, histórico e necessidades específicas.
             </p>
             <p>
-            A experiência no serviço público me proporcionou contato com casos de urgência, trauma, infecções e quadros clínicos mais complexos, aprimorando minha capacidade de conduzir atendimentos de forma segura e precisa.
+            A experiência no serviço público me proporciona contato com casos de urgência, trauma, infecções e quadros clínicos mais complexos, aprimorando minha capacidade de conduzir atendimentos de forma segura e precisa.
             </p>
             <p>
               Nas consultas particulares, priorizo um diagnóstico criterioso e um plano terapêutico bem explicado, para que tutor e paciente se sintam tranquilos e orientados. Meu compromisso é oferecer um atendimento responsável, ético e acolhedor, onde bem-estar, técnica e cuidado caminham juntos.
             </p>
+            <p>
+            Dra. Rayssa Lopes
+Cuidado onde eles confiam🐶🐈
+             </p>
             </div>
 
             {/* Diferenciais */}
