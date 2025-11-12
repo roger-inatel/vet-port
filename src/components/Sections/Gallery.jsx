@@ -59,20 +59,25 @@ export default function Gallery() {
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         spaceBetween={20}
         slidesPerView={1}
-        navigation
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
         pagination={{ 
           clickable: true,
           dynamicBullets: true
         }}
         autoplay={{
-          delay: 4500,
+          delay: 5000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true
         }}
         effect="fade"
-        fadeEffect={{ crossFade: true }}
+        fadeEffect={{ 
+          crossFade: true 
+        }}
         loop={true}
-        speed={800}
+        speed={1000}
         className="gallery-swiper"
       >
         {galleryImages.map((image, index) => (

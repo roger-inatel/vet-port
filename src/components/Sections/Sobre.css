@@ -113,13 +113,13 @@
 }
 
 /* ============================================
-   CARD DE IMAGEM/AVATAR - LIMPO E OTIMIZADO
+   CARD DE IMAGEM/AVATAR - OTIMIZADO PARA DESTAQUE
    ============================================ */
 
 .sobre-image-card {
   position: relative;
   background: #ffffff;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: 16px;
   box-shadow: 0 6px 25px rgba(190, 32, 135, 0.12);
   border: 2px solid rgba(231, 81, 164, 0.1);
@@ -133,11 +133,15 @@
   box-shadow: 0 12px 40px rgba(190, 32, 135, 0.18);
 }
 
+/* ============================================
+   IMAGE WRAPPER - RESPONSIVO E CENTRALIZADO
+   ============================================ */
+
 .image-wrapper {
   position: relative;
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 1.5rem;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 2rem;
   flex-shrink: 0;
 }
 
@@ -149,18 +153,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(231, 81, 164, 0.3);
+  box-shadow: 
+    0 10px 35px rgba(231, 81, 164, 0.3),
+    0 5px 18px rgba(219, 111, 171, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   position: relative;
   z-index: 2;
   overflow: hidden;
-  padding: 4px;
+  padding: 6px;
+  transition: all 0.5s cubic-bezier(0.55, 0.08, 0.32, 0.99);
+  backdrop-filter: blur(8px);
 }
 
+
 .profile-image {
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 40%;
   border-radius: 50%;
   background: #ffffff;
   display: block;
@@ -177,8 +187,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   background: radial-gradient(circle, rgba(231, 81, 164, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 1;
@@ -197,13 +207,13 @@
 }
 
 /* ============================================
-   BADGES DE DESTAQUE
+   BADGES DE DESTAQUE - OTIMIZADOS
    ============================================ */
 
 .badges {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.75rem;
   justify-content: center;
 }
 
@@ -211,13 +221,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1rem;
+  gap: 0.6rem;
+  padding: 0.8rem 1.1rem;
   background: linear-gradient(135deg, #f9f0f9 0%, #f5e8f7 100%);
   border: 1px solid rgba(231, 81, 164, 0.2);
   border-radius: 20px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #be2087;
   transition: all 0.3s ease;
@@ -351,7 +361,7 @@
 }
 
 /* ============================================
-   RESPONSIVIDADE - TABLET (768px+)
+   RESPONSIVIDADE - MOBILE (480px+)
    ============================================ */
 
 @media (min-width: 480px) {
@@ -359,7 +369,21 @@
     flex-direction: row;
     gap: 0.75rem;
   }
+  
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .image-glow {
+    width: 220px;
+    height: 220px;
+  }
 }
+
+/* ============================================
+   RESPONSIVIDADE - TABLET (768px+)
+   ============================================ */
 
 @media (min-width: 768px) {
   .sobre-content {
@@ -372,19 +396,33 @@
   .sobre-image-card {
     position: sticky;
     top: 100px;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 20px;
   }
 
   .image-wrapper {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 2rem;
+    width: 240px;
+    height: 240px;
+    margin: 0 auto 2.5rem;
+  }
+  
+  .image-placeholder {
+    padding: 6px;
+  }
+  
+  .profile-image {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
   }
 
   .image-glow {
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
+  }
+  
+  .badge {
+    font-size: 0.95rem;
+    padding: 0.85rem 1.2rem;
   }
 
   .text-highlight {
@@ -435,6 +473,17 @@
     grid-template-columns: 350px 1fr;
     gap: 3rem;
   }
+  
+  .image-wrapper {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 3rem;
+  }
+
+  .image-glow {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 /* ============================================
@@ -454,23 +503,23 @@
     font-size: 1.75rem;
   }
 
-  .image-wrapper {
-    width: 140px;
-    height: 140px;
+  .sobre-image-card {
+    padding: 1.5rem 1rem;
   }
 
-  .image-glow {
+  .image-wrapper {
     width: 160px;
     height: 160px;
   }
 
-  .sobre-image-card {
-    padding: 1.25rem;
+  .image-glow {
+    width: 180px;
+    height: 180px;
   }
 
   .badge {
-    font-size: 0.8rem;
-    padding: 0.6rem 0.85rem;
+    font-size: 0.85rem;
+    padding: 0.7rem 0.9rem;
   }
 
   .text-highlight {

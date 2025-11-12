@@ -56,13 +56,18 @@ export default function Sobre() {
 
             <div className="text-content">
              <p>
-             A Dra. Rayssa é médica veterinária formada pela Universidade UNA e atualmente cursa pós-graduação em Medicina de Felinos. Sua paixão pelos animais e dedicação à profissão se refletem no cuidado e atenção com cada paciente.
+            Dra. Rayssa Lopes
+Cuidado onde eles confiam🐶🐈
              </p>
             <p>
-            Atua diariamente no Centro de Bem-Estar Animal de Pouso Alegre, onde presta atendimento de urgência e emergência a cães e gatos em casos críticos — como atropelamentos, fraturas, intoxicações, ferimentos graves e miíases — acumulando uma ampla experiência prática no manejo de diferentes situações clínicas.
+            Acredito em uma medicina veterinária que valoriza atenção, responsabilidade e clareza. Sou médica veterinária formada pela Universidade UNA e pós-graduanda em Medicina de Felinos, com atuação tanto no serviço público quanto em atendimento particular.
+            Ao longo da minha trajetória na Medicina Veterinária, desenvolvi um olhar sensível e atento à individualidade de cada animal, considerando comportamento, histórico e necessidades específicas.
             </p>
             <p>
-            Além da atuação no serviço público, realiza consultas particulares, sempre com foco em um atendimento humanizado, diagnósticos precisos e tratamentos baseados em evidências. Seu compromisso é garantir o bem-estar dos animais e orientar seus tutores com empatia e profissionalismo.
+            A experiência no serviço público me proporcionou contato com casos de urgência, trauma, infecções e quadros clínicos mais complexos, aprimorando minha capacidade de conduzir atendimentos de forma segura e precisa.
+            </p>
+            <p>
+              Nas consultas particulares, priorizo um diagnóstico criterioso e um plano terapêutico bem explicado, para que tutor e paciente se sintam tranquilos e orientados. Meu compromisso é oferecer um atendimento responsável, ético e acolhedor, onde bem-estar, técnica e cuidado caminham juntos.
             </p>
             </div>
 
