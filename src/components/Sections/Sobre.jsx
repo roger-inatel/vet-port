@@ -8,7 +8,8 @@ export default function Sobre() {
       <div className="sobre-container">
         {/* Cabeçalho da Seção */}
         <div className="sobre-header">
-          <h2>Rayssa Lopes Médica Veterinária</h2>
+          <h2>Rayssa Lopes </h2>
+          <h2>Médica Veterinária</h2>
           <div className="header-decoration"></div>
         </div>
 
@@ -67,9 +68,12 @@ export default function Sobre() {
               Nas consultas particulares, priorizo um diagnóstico criterioso e um plano terapêutico bem explicado, para que tutor e paciente se sintam tranquilos e orientados. Meu compromisso é oferecer um atendimento responsável, ético e acolhedor, onde bem-estar, técnica e cuidado caminham juntos.
             </p>
             <p>
-            Dra. Rayssa Lopes
-Cuidado onde eles confiam🐶🐈
-             </p>
+            MV. Rayssa Lopes
+            </p>
+            <p>
+              Cuidado onde eles confiam
+             🐶🐈
+            </p>
             </div>
 
             {/* Diferenciais */}
